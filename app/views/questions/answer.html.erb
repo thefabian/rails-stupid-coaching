@@ -1,0 +1,21 @@
+<h1>Stupid Coaching</h1>
+
+<div class="output">
+  <p><%= @answer %></p>
+  <p class="text-italic">- You</p>
+</div>
+
+<div class="output active">
+  <p><strong>
+    <% if @answer == "I am going to work" %>
+    Great!
+    <% elsif @answer[-1] == "?"%>
+    Silly question, get dressed and go to work!
+    <% else %>
+    I don't care, get dressed and go to work!
+    <% end %>
+  </strong></p>
+  <p class="text-italic">- Your coach</p>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
